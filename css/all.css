@@ -773,8 +773,11 @@ hr {
 #imagelightbox-loading,
 #imagelightbox-loading div {
   -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
   -moz-border-radius: 50%;
+  -moz-background-clip: padding;
   border-radius: 50%;
+  background-clip: padding-box;
 }
 #imagelightbox-loading div {
   width: 1.25em;
@@ -862,6 +865,9 @@ a:hover {
 }
 ul {
   list-style-image: url('../img/arrow.png');
+}
+hr {
+  border-top: 1px solid #888;
 }
 .w-50 {
   display: inline-block;
@@ -997,13 +1003,15 @@ footer {
     width: 100%;
     padding: 6px 0;
   }
+  .w-50 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
   .gallery a {
     width: 40%;
   }
   .gallery a img {
-    width: 100%;
-  }
-  .w-50 {
     width: 100%;
   }
 }
