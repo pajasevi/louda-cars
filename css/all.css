@@ -916,6 +916,16 @@ footer {
   background: #ffffff;
   color: #4ba82e;
 }
+.breadcrumb {
+  height: 30px;
+  position: relative;
+  background: #FFF;
+  z-index: 999;
+  top: 16px;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 20px;
+}
 .carousel {
   width: 1040px;
   left: -20px;
