@@ -867,11 +867,23 @@ ul {
   list-style-image: url('../img/arrow.png');
 }
 hr {
-  border-top: 1px solid #888;
+  border-top: 1px solid #aaa;
 }
 .w-50 {
   display: inline-block;
   width: 49%;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
 }
 .content-wrap {
   width: 1000px;
@@ -917,18 +929,37 @@ footer {
   color: #4ba82e;
 }
 .breadcrumb {
-  height: 30px;
   position: relative;
-  background: #FFF;
-  z-index: 999;
   top: 16px;
-  font-size: 18px;
-  line-height: 30px;
+  z-index: 999;
+  height: 36px;
   padding: 0 20px;
+  background: #FFF;
+  border: 1px solid #CCC;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 36px;
 }
 .carousel {
   width: 1040px;
   left: -20px;
+}
+.news article {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+.news article img {
+  float: left;
+  padding: 0 10px 10px 0;
+}
+.news article .more {
+  margin-top: 1em;
+  margin-right: 1em;
+  text-align: right;
+}
+.news article .more a {
+  padding-right: 15px;
+  background: url('../img/arrow.png') no-repeat right center;
 }
 .gallery {
   text-align: justify;

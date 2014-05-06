@@ -26,12 +26,24 @@ ul {
 }
 
 hr {
-	border-top: 1px solid #888;
+	border-top: 1px solid #aaa;
 }
 
 .w-50 {
 	display: inline-block;
 	width: 49%;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+}
+.clearfix {
+  zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 .content-wrap {
@@ -97,6 +109,29 @@ footer {
 .carousel {
 	width: 1040px;
 	left: -20px;
+}
+
+.news {
+	article {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 5px;
+
+		img {
+			float: left;
+			padding: 0 10px 10px 0;
+		}
+
+		.more {
+			margin-top: 1em;
+			margin-right: 1em;
+			text-align: right;
+
+			a {
+				padding-right: 15px;
+				background: url('../img/arrow.png') no-repeat right center;
+			}
+		}
+	}
 }
 
 .gallery {
