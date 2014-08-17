@@ -14,4 +14,28 @@ var activityIndicatorOn = function()
 	overlayOff = function()
 			{
 				$( '#imagelightbox-overlay' ).remove();
-			}
+			};
+
+$('#main-menu').on('click', 'a', function(e) {
+	e.preventDefault();
+
+	var elem = $(this).attr('href');
+	var target = $(elem).offset().top;
+
+	$('html, body').animate({
+		scrollTop: target
+	}, 1000);
+
+});
+
+$(window).on('scroll', function() {
+	var menuWrap = $("#main-menu").offset().top;
+    var documentTop = $(document).scrollTop();
+
+    if (documentTop > menuWrap) {
+        $("#main-menu .content-wrap").addClass("sticky");
+    }
+    else {
+        $("#main-menu .content-wrap").removeClass("sticky");
+    }
+});
