@@ -57,6 +57,18 @@ hr {
   zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
 
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
 .content-wrap {
 	width: 1000px;
 	margin: 0 auto;
@@ -190,6 +202,15 @@ footer {
 		background: #eee!important;
 		border-bottom: 1px solid #ccc;
 		font-weight: 700;
+	}
+
+	&.hours {
+		width: 50%;
+		margin: 0px auto;
+
+		tr td:last-child {
+			text-align: right;
+		}
 	}
 }
 
