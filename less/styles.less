@@ -1,11 +1,12 @@
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
 body {
     font-family: @base-font, sans-serif;
+		font-size: 130%;
 }
 
 h1,h2 {
@@ -21,6 +22,10 @@ h1 {
 
 h2 {
 	font-size: 2.5em;
+}
+
+p {
+	font-size: 1.2em;
 }
 
 a {
@@ -87,6 +92,34 @@ footer {
 	background: #ccc;
 }
 
+.positioner {
+	position: relative;
+}
+
+#show-menu {
+
+	@media screen and (min-width: 480px) {
+		display: none;
+	}
+
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 5px;
+	border: 1px solid;
+	.border-radius(3px);
+	color: #444;
+	.transition(all 0.3s);
+
+	&:hover {
+		background: @light-main-color;
+		border-color: #aaa;
+		text-decoration: none;
+	}
+}
+
 #main-menu {
 	position: fixed;
 	top: 0;
@@ -94,6 +127,7 @@ footer {
 	width: 1000px;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 
 	li {
 		display: inline-block;
@@ -104,7 +138,7 @@ footer {
 		display: inline-block;
 		width: 100%;
 		padding: 6px 20px;
-		font-size: 18px;
+		font-size: 1.125em;
 		font-weight: 300;
 		text-decoration: none;
 		text-align: center;
@@ -121,8 +155,7 @@ footer {
 
 
 .carousel {
-	width: 1040px;
-	left: -20px;
+	width: 100%;
 }
 
 .news {
@@ -181,7 +214,7 @@ footer {
 
 	th,td {
 		padding: 15px 20px;
-		font-size: 14px;
+		font-size: 1.2em;
 		color: #666;
 		text-align: left;
 	}
@@ -215,8 +248,8 @@ footer {
 }
 
 .overlay {
-   background:transparent; 
-   position:relative; 
+   background:transparent;
+   position:relative;
    width: 100%;
    height: 800px; /* your iframe height */
    top: 800px;  /* your iframe height */
@@ -242,22 +275,6 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1040px) {
-
-	.content-wrap {
-		width: 100%;
-	}
-
-	.content {
-		padding: 0 10px;
-	}
-
-	.carousel {
-		width: 100%;
-		left: 0;
-	}
-}
-
 @media screen and (max-width: 1000px) {
 
 	header {
@@ -274,8 +291,20 @@ footer {
 			width: 50%;
 		}
 	}
+	.content-wrap {
+		width: 100%;
+	}
+
+	.content section {
+		padding: 0 10px;
+	}
+
 }
 @media screen and (max-width: 760px) {
+
+	body {
+		font-size: 120%;
+	}
 
 	.w-50 {
 		width: 100%;
@@ -287,12 +316,20 @@ footer {
 		}
 	}
 
+	.table.hours {
+		width: 70%;
+	}
+
 }
 
 @media screen and (max-width: 480px) {
 
+	body {
+		font-size: 100%;
+	}
+
 	#main-menu li {
-		width: 100%;
+			width: 100%;
 	}
 
 	.gallery {
@@ -304,4 +341,8 @@ footer {
 			}
 		}
 	}
-}	
+
+	.table.hours {
+		width: 100%;
+	}
+}
