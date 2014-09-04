@@ -79,6 +79,10 @@ hr {
 	margin: 0 auto;
 }
 
+.content section {
+		padding-bottom: 2em;
+}
+
 header {
 	padding-top: 50px;
 	width: 100%;
@@ -151,8 +155,22 @@ footer {
 			color: @main-color;
 		}
 	}
+
+	@media screen and (max-width: 480px) {
+		&.hidden {
+			display: none;
+		}
+	}
+
 }
 
+.ui-accordion .ui-accordion-header {
+	border-bottom: 1px solid #ccc;
+
+	&:focus {
+		outline: none;
+	}
+}
 
 .carousel {
 	width: 100%;
@@ -210,7 +228,6 @@ footer {
 	width: 100%;
 	border-collapse: collapse;
 	border-top: 1px solid #ccc;
-	margin-bottom: 50px;
 
 	th,td {
 		padding: 15px 20px;
@@ -296,7 +313,7 @@ footer {
 	}
 
 	.content section {
-		padding: 0 10px;
+		padding: 0 10px 2em;
 	}
 
 }
@@ -328,8 +345,15 @@ footer {
 		font-size: 100%;
 	}
 
-	#main-menu li {
+	#main-menu {
+
+		li {
 			width: 100%;
+		}
+
+		a {
+			padding: 12px 20px;
+		}
 	}
 
 	.gallery {

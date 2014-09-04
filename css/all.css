@@ -909,6 +909,9 @@ hr {
   width: 1000px;
   margin: 0 auto;
 }
+.content section {
+  padding-bottom: 2em;
+}
 header {
   padding-top: 50px;
   width: 100%;
@@ -985,6 +988,17 @@ footer {
   background: #ffffff;
   color: #4ba82e;
 }
+@media screen and (max-width: 480px) {
+  #main-menu.hidden {
+    display: none;
+  }
+}
+.ui-accordion .ui-accordion-header {
+  border-bottom: 1px solid #ccc;
+}
+.ui-accordion .ui-accordion-header:focus {
+  outline: none;
+}
 .carousel {
   width: 100%;
 }
@@ -1036,7 +1050,6 @@ footer {
   width: 100%;
   border-collapse: collapse;
   border-top: 1px solid #ccc;
-  margin-bottom: 50px;
 }
 .table th,
 .table td {
@@ -1110,7 +1123,7 @@ footer {
     width: 100%;
   }
   .content section {
-    padding: 0 10px;
+    padding: 0 10px 2em;
   }
 }
 @media screen and (max-width: 760px) {
@@ -1133,6 +1146,9 @@ footer {
   }
   #main-menu li {
     width: 100%;
+  }
+  #main-menu a {
+    padding: 12px 20px;
   }
   .gallery a {
     width: 40%;
