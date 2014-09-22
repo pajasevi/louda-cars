@@ -848,6 +848,7 @@ hr {
   box-sizing: border-box;
 }
 body {
+  position: relative;
   font-family: 'Ubuntu', sans-serif;
   font-size: 130%;
 }
@@ -905,6 +906,10 @@ hr {
 .center {
   text-align: center;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+}
 .content-wrap {
   width: 1000px;
   margin: 0 auto;
@@ -913,7 +918,6 @@ hr {
   padding-bottom: 2em;
 }
 header {
-  padding-top: 50px;
   width: 100%;
   margin: 0 auto;
 }
@@ -956,8 +960,12 @@ footer {
   border-color: #aaa;
   text-decoration: none;
 }
+@media screen and (min-width: 480px) {
+  #main-menu-wrap {
+    height: 33px;
+  }
+}
 #main-menu {
-  position: fixed;
   top: 0;
   z-index: 999;
   width: 1000px;
@@ -968,6 +976,10 @@ footer {
 #main-menu li {
   display: inline-block;
   width: 25%;
+}
+#main-menu li.active a {
+  background: #ffffff;
+  color: #4ba82e;
 }
 #main-menu a {
   display: inline-block;
@@ -1114,10 +1126,6 @@ footer {
     position: static;
     width: 100%;
     height: initial;
-  }
-  #main-menu li {
-    display: inline-block;
-    width: 50%;
   }
   .content-wrap {
     width: 100%;

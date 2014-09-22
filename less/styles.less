@@ -5,6 +5,7 @@
 }
 
 body {
+		position: relative;
     font-family: @base-font, sans-serif;
 		font-size: 130%;
 }
@@ -74,6 +75,11 @@ hr {
 	text-align: center;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+}
+
 .content-wrap {
 	width: 1000px;
 	margin: 0 auto;
@@ -84,7 +90,6 @@ hr {
 }
 
 header {
-	padding-top: 50px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -123,9 +128,13 @@ footer {
 		text-decoration: none;
 	}
 }
+@media screen and (min-width: 480px) {
+	#main-menu-wrap {
+		height: 33px;
+	}
+}
 
 #main-menu {
-	position: fixed;
 	top: 0;
 	z-index: 999;
 	width: 1000px;
@@ -136,6 +145,11 @@ footer {
 	li {
 		display: inline-block;
 		width: 25%;
+
+		&.active a {
+			background: @white;
+			color: @main-color;
+		}
 	}
 
 	a {
@@ -302,11 +316,6 @@ footer {
 		position: static;
 		width: 100%;
 		height: initial;
-
-		li {
-			display: inline-block;
-			width: 50%;
-		}
 	}
 	.content-wrap {
 		width: 100%;

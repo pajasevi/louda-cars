@@ -47,13 +47,15 @@ $(window).on('resize', function() {
 });
 
 $(window).on('scroll', function() {
-	var menuWrap = $("#main-menu").offset().top;
+		var menuWrap = $("#main-menu-wrap").offset().top;
     var documentTop = $(document).scrollTop();
 
-    if (documentTop > menuWrap) {
-        $("#main-menu .content-wrap").addClass("sticky");
-    }
-    else {
-        $("#main-menu .content-wrap").removeClass("sticky");
-    }
+		if($(window).innerWidth() > 479) {
+	    if (documentTop > menuWrap) {
+	        $("#main-menu").addClass("sticky");
+	    }
+	    else {
+	        $("#main-menu").removeClass("sticky");
+	    }
+		}
 });
