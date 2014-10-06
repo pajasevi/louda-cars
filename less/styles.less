@@ -44,8 +44,10 @@ a {
 	padding: 20px 0;
 }
 
-ul {
-	list-style-image: url('../img/arrow.png')
+ul.list {
+	list-style-image: url('../img/arrow.png');
+	font-size: 1.4em;
+	line-height: 1.8em;
 }
 
 hr {
@@ -77,14 +79,14 @@ span.plus {
 .ui-accordion-header .plus:after {
 	content: "+";
 	display: inline-block;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	color: @main-color;
 }
 
 .ui-accordion-header-active .plus:after {
 	content: "–";
 	display: inline-block;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	color: @main-color;
 }
 
@@ -124,6 +126,7 @@ span.plus {
 
 .content section {
 		padding: 2em 0;
+		box-shadow: 0 3px 10px #ccc inset;
 }
 
 header {
@@ -172,7 +175,7 @@ footer {
 }
 @media screen and (min-width: 480px) {
 	#main-menu-wrap {
-		height: 37px;
+		height: 36px;
 	}
 }
 
@@ -224,6 +227,8 @@ footer {
 
 .ui-accordion {
 
+	margin-bottom: 3em;
+
 	.ui-accordion-header {
 		background: #fff;
 		border-radius: 2px;
@@ -246,6 +251,7 @@ footer {
 
 .carousel {
 	width: 100%;
+	margin-bottom: 3em;
 }
 
 .news {
