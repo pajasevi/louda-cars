@@ -55,11 +55,37 @@ hr {
 .w-50 {
 	display: inline-block;
 	width: 49%;
-	vertical-align: top;
+
+	&.v-top {
+		vertical-align: top;
+	}
 
 	.table {
 		width: 100%;
 	}
+}
+
+.f-right {
+	float: right;
+}
+
+span.plus {
+	position: relative;
+	top: -5px;
+}
+
+.ui-accordion-header .plus:after {
+	content: "+";
+	display: inline-block;
+	font-size: 1.4em;
+	color: @main-color;
+}
+
+.ui-accordion-header-active .plus:after {
+	content: "–";
+	display: inline-block;
+	font-size: 1.4em;
+	color: @main-color;
 }
 
 .clearfix:before,
@@ -146,7 +172,7 @@ footer {
 }
 @media screen and (min-width: 480px) {
 	#main-menu-wrap {
-		height: 33px;
+		height: 37px;
 	}
 }
 
@@ -199,9 +225,9 @@ footer {
 .ui-accordion {
 
 	.ui-accordion-header {
-		background: #e0e0e0;
+		background: #fff;
 		border-radius: 2px;
-		font-size: 1.2em;
+		font-size: 1.5em;
 
 		&:focus {
 			outline: none;
@@ -211,6 +237,10 @@ footer {
 	.ui-accordion-header-active,
 	.ui-accordion-content-active {
 		background: rgb(255, 255, 255);
+	}
+
+	.ui-accordion-content {
+		padding: 2em 2.2em;
 	}
 }
 
@@ -296,9 +326,10 @@ footer {
 	}
 
 	th {
-		background: #eee!important;
+		background: #fff!important;
 		border-bottom: 1px solid #ccc;
 		font-weight: 700;
+		text-align: center;
 	}
 }
 
