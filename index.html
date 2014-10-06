@@ -285,19 +285,12 @@
 
         <script src="js/carousel.min.js"></script>
         <script src="js/scrollspy.min.js"></script>
-        <script src="js/imagelightbox.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
 
         <script src="js/main.js"></script>
 
         <script>
         $( function() {
-            $('.lightbox').imageLightbox({
-                onStart:     function() { overlayOn(); },
-                onEnd:       function() { overlayOff(); activityIndicatorOff(); },
-                onLoadStart: function() { activityIndicatorOn(); },
-                onLoadEnd:   function() { activityIndicatorOff(); }
-            });
             $('.carousel').carousel();
             $('body').scrollspy();
             $('.accordion').accordion({
