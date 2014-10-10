@@ -114,11 +114,6 @@ span.plus {
 	text-align: center;
 }
 
-.sticky {
-	position: fixed;
-	top: 0;
-}
-
 .content-wrap {
 	width: 1000px;
 	margin: 0 auto;
@@ -126,7 +121,10 @@ span.plus {
 
 .content section {
 		padding: 2em 0;
-		box-shadow: 0 3px 10px #ccc inset;
+
+		&:nth-of-type(even) {
+			background: #efefef;
+		}
 }
 
 header {
@@ -180,11 +178,12 @@ footer {
 }
 
 #main-menu {
-	top: 0;
+	position: relative;
+	top: 16px;
 	z-index: 999;
-	width: 1000px;
+	width: 960px;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	overflow: hidden;
 
 	li {
@@ -195,7 +194,7 @@ footer {
 		&.active a {
 			background: @white;
 			color: @main-color;
-			box-shadow: 0 0 20px #ccc inset;
+			box-shadow: 0 -3px 0 #ccc inset;
 		}
 	}
 
@@ -203,7 +202,7 @@ footer {
 		display: inline-block;
 		width: 100%;
 		padding: 6px 20px;
-		font-size: 1.4em;
+		font-size: 1.2em;
 		font-weight: 300;
 		text-decoration: none;
 		text-align: center;
@@ -214,8 +213,15 @@ footer {
 		&:hover {
 			background: @white;
 			color: @main-color;
-			box-shadow: 0 0 20px #ccc inset;
+			box-shadow: 0 -3px 0 #ccc inset;
 		}
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -347,13 +353,6 @@ footer {
    height: 500px; /* your iframe height */
    top: 500px;  /* your iframe height */
    margin-top: -500px;  /* your iframe height */
-}
-
-#info {
-	background: #efefef;
-}
-#pricing {
-	background: #fafafa;
 }
 
 .phones-mail {
